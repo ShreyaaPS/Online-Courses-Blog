@@ -1,0 +1,430 @@
+<!---<html>
+<head>
+<title>
+Registration Form
+</title>
+<style> input:focus {
+background-color: yellow;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/ libs/angularjs/1.6.9/angular.min.js"></script>
+
+</head>
+<body ng-app = "myApp" style="background-color: rgb(5, 5, 5); color: rgb(255, 233, 30);" ng- app="ngAnimate">
+<div class="relative" style="padding-left: 295px;">
+
+<svg height="50" width="100">
+<circle cx="30" cy="30" r="20" str oke="black" stroke-width="3" fill="yellow" />
+</svg>
+<svg height="50" width="100">
+<circle cx="30" cy="30" r="10" str oke="black" stroke-width="3" fill="yellow" />
+</svg>
+<svg height="50" width="100">
+<circle cx="30" cy="30" r="20" str oke="black" stroke-width="3" fill="yellow" />
+ 
+</svg>
+<svg height="50" width="100">
+<circle cx="30" cy="30" r="10" str oke="black" stroke-width="3" fill="yellow" />
+</svg>
+<svg height="50" width="100">
+<circle cx="30" cy="30" r="20" str oke="black" stroke-width="3" fill="yellow" />
+</svg>
+<svg height="50" width="100">
+<circle cx="30" cy="30" r="10" str oke="black" stroke-width="3" fill="yellow" />
+</svg>
+<svg height="50" width="100">
+<circle cx="30" cy="30" r="20" str oke="black" stroke-width="3" fill="yellow" />
+</svg>
+</div>
+
+ 
+<p>
+
+    <h1 style="color: rgb(255, 233, 30);">
+        <b>
+        <center>
+        Course Registration Form
+        </center>
+        </b>
+        </h1>
+
+
+
+
+
+
+</p>
+ 
+
+
+
+ 
+<div style="margin-left: 500px;">
+
+<form>
+<p>
+<b>First Name:</b>
+ 
+<input type="text" name="name">
+</p>
+
+ 
+<p>
+
+    <b>Last Name:</b>
+    <input type="text" name="name">
+
+</p>
+ 
+
+
+ 
+
+ 
+<p>
+
+    <b>Date of Birth:</b>
+    <input type="date">
+
+</p>
+ 
+
+
+ 
+
+ 
+<p>
+    <b>Email:</b>
+    <input type="text" name="name">
+
+</p>
+ 
+
+
+
+ 
+
+ 
+<p>
+    <b>Phone Number:</b>
+    <input type="tel" >
+
+</p>
+ 
+
+
+
+ 
+
+<p>
+<b>Gender: </b>
+<input type="radio" id="male" name="gender" value="male">
+<label for="male">Male</label>
+<input type="radio" id="female" name=" gender" value="female">
+<label for="female">Female</label>
+<input type="radio" id="other" name="g ender" value="other">
+ 
+<label for="other">Other</label>
+</p>
+
+<div ng-controller = "CalcController">
+<p>
+ 
+
+
+
+
+</option>
+ 
+<label for="course"><b>Course:</b></label>
+
+<select class="select" id="course">
+<option value="1000">C Programming
+
+<option value="5000">HTML, CSS WebDevelopment</option>
+<option value="700">Data Analytics
+ 
+</option>
+
+
+ 
+
+<option value="1500">Programming in Java</option> 
+
+<option value="900">Android Development</option>
+
+<option value="2000">Python for Data Science</option>
+ 
+</select>
+</p>
+<button ng-click = "find()">Show Price</button>
+<p>Price with GST added is: {{result}}</p>
+</div>
+
+ 
+
+
+
+
+ 
+<p>
+ 
+
+
+<b>How would you like to get notified?</b><br>
+
+<input type="checkbox" name="mail">
+<label for="mail">Send notifications via e-mail</label><br>
+<input type="checkbox" name="sms">
+<label for="sms">Send notifications vi a SMS</label><br>
+<br>
+</p>
+</form>
+<button onclick="myFunction()" style="padding: 5px;">Proceed to Payment</button>
+<br>
+<br>
+<div class="centered">
+<b>
+<comp></comp>
+</b>
+</div>
+</div>
+<center>
+<h2 style="color: yellow;">
+Click for some music! <input type="checkbo x" ng-model="myCheck">
+</h2>
+<audio controls autoplay ng-show="myCheck">
+<source src="Happy_music.mp3" type="audio/mpeg" > 
+ 
+
+Your browser does not support the audio element.
+
+</audio>
+</center>
+ 
+
+
+
+<script>
+var myApp = angular.module('myApp', []);
+myApp.component("comp",{template: 'Thankyou for using 360 Learn!'});
+function myFunction()
+{
+location.replace("Page5.html")
+}
+myApp.factory('gstService', function()
+{
+var fact = {};
+
+fact.mul = function(a)
+{
+return a*1.0+0.18*a
+}
+return fact;
+});
+
+myApp.service('Calc', function(gstService)
+{
+this.gst = function(a)
+{
+return gstService.mul(a);
+}
+});
+myApp.controller('CalcController', function($scope, Calc){
+$scope.find = function()
+{
+var e = document.getElementById('course'); var num = e.value;
+$scope.result = Calc.gst(num);
+}
+ 
+});
+</script>
+</body>
+</html>-->
+
+<html>
+    <head>
+    <title>
+    Registration  Form
+    </title>
+    <html>
+<head>
+
+<style>
+input:focus  {	
+ 	background-color:  yellow;
+}	
+</style>
+    </head>
+    <body body  style="background-color:  rgb(5,  5,  5);  color:  rgb(255,  233,  30);"  >
+        <html>
+           
+            
+            <div  class="relative"  style="padding-left:	295px;">
+                
+            <svg  height="50"  width="100">	
+            <circle  cx="30"  cy="30"  r="20"  strok	
+            e="black"  stroke-width="3"  fill="yellow"  />	
+            </svg>	
+            <svg  height="50"  width="100">	
+            <circle  cx="30"  cy="30"  r="10"  strok	
+            e="black"  stroke-width="3"  fill="yellow"  />	
+            </svg>	
+            <svg  height="50"  width="100">	
+            <circle  cx="30"  cy="30"  r="20"  strok	
+            e="black"  stroke-width="3"  fill="yellow"  />	
+            </svg>	
+            <svg  height="50"  width="100">	
+            <circle  cx="30"  cy="30"  r="10"  strok	
+            e="black"  stroke-width="3"  fill="yellow"  />	
+            </svg>	
+            <svg  height="50"  width="100">	
+            <circle  cx="30"  cy="30"  r="20"  strok	
+            e="black"  stroke-width="3"  fill="yellow"  />	
+            </svg>	
+             
+            
+            <svg  height="50"  width="100">
+            <circle  cx="30"  cy="30"  r="10"  strok e="black"  stroke-width="3"  fill="yellow"  />
+            </svg>
+            <svg  height="50"  width="100">
+            <circle  cx="30"  cy="30"  r="20"  strok e="black"  stroke-width="3"  fill="yellow"  />
+            </svg>
+            </div>
+            
+          
+           
+            
+        <p>
+    <h1 style="color:  rgb(255,  233,  30);">
+    <b>
+    <center>
+    Course  Registration  Form
+    </center>
+    </b>
+    </h1>
+    </p>
+    <div style="margin-left:  500px;">
+    
+    <form>
+    <p>
+    <b>First  Name:</b>
+    <input  type="text"  name="name">
+    </p>
+    
+    <p>
+    <b>Last  Name:</b>
+    <input  type="text"  name="name">
+    </p>
+    <p>
+
+        <b>Date  of  Birth:</b>
+        <input  type="date">
+    </p>
+     
+    
+   
+     
+    
+    
+     
+    <p>
+    
+        <b>Email:</b>
+        <input  type="text"  name="name">
+    
+    </p>
+     
+    
+     
+    
+     
+    <p>
+    
+        <b>Phone  Number:</b>
+        <input  type="tel"  >
+    </p>
+     
+    
+    
+    
+     
+    
+     
+    <p>
+     
+    
+    
+    <b>Gender:  </b>
+    <input  type="radio"  id="male"  name="gender"  value="male">
+    <label  for="male">Male</label>
+    <input  type="radio"  id="female"  name="gender"  value="female">
+    <label  for="female">Female</label>
+    <input  type="radio"  id="other"  name="gender"  value="other">
+    <label  for="other">Other</label>
+    </p>
+    <label for="course"><b>Course:</b></label>
+
+    <select class="select" id="course">
+    <option value="1000">C Programming
+    
+    <option value="5000">HTML, CSS WebDevelopment</option>
+    <option value="700">Data Analytics
+     
+    </option>
+    
+    
+     
+    
+    <option value="1500">Programming in Java</option> 
+    
+    <option value="900">Android Development</option>
+    
+    <option value="2000">Python for Data Science</option>
+     
+    </select>
+    </p>
+    
+     
+    
+    
+    
+    
+     
+    <p>
+     
+    
+    
+    <b>How would you like to get notified?</b><br>
+    
+    <input type="checkbox" name="mail">
+    <label for="mail">Send notifications via e-mail</label><br>
+    <input type="checkbox" name="sms">
+    <label for="sms">Send notifications vi a SMS</label><br>
+    <br>
+    </p>
+    </form>
+    </div>
+    <center>
+        <a href="page5.html"><button>Proceed to Payment!</button></a>
+    </center>
+    </body>
+    </html>
+     
+    
+    
+     
+  
+                 
+                    
+    
+   
+     
+    
+   
+     
+        
+
+
+
+ 

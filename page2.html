@@ -1,0 +1,314 @@
+<html>
+<head>
+<meta  name="description"  content="Sample  webpage2">
+<meta  name="author"  content="Shreya">
+<title>
+    Courses
+    </title>
+    <link  rel="stylesheet"  href="pg2.css"> 
+    
+    </head>
+    <body style="background-color: powderblue  ">
+    
+    <h3>
+    
+    
+     
+    
+    
+    
+    
+    <div  class="column">
+    
+    <center><h1><b>Course  duration  and  date  of  examination</h1>
+    <iframe  src="Page3.html"  title="Sample  Frame"  height="120"  width="350"  ></iframe>
+    <div>
+    <br><br>
+    <table  border="1"  style="width:30%" >
+    <tr>
+    <th>Course  ID</th>
+    <th>Course  Name</th>
+    <th>Cost</th>
+    <th>Duration</th>
+    <th>Date  of  Examination</th>
+    </tr>
+    <tr>
+    <td>1</td>
+    <td>C  Programming</td>
+    <td>Rs.1000</td>
+    <td>8  weeks</td>
+    <td>12-08-2022</td>
+    </tr>
+    <tr>
+    <td>2</td>
+    <td>HTML,  CSS  Web  Development</td>
+    <td>Rs.5000</td>
+     
+    <td>4  weeks</td>
+    <td>13-08-2022</td>
+    </tr>
+    <tr>
+    <td>3</td>
+    <td>Data  Analytics</td>
+    <td>Rs.700</td>
+    <td>4  weeks</td>
+    <td>14-08-2022</td>
+    </tr>
+    <tr>
+    <td>4</td>
+    <td>Programming  in  Java</td>
+    <td>Rs.1500</td>
+    <td>12  weeks</td>
+    <td>15-08-2022</td>
+    </tr>
+    <tr>
+    <td>5</td>
+    <td>Android  Development</td>
+    <td>Rs.900</td>
+    <td>8  weeks</td>
+    <td>16-08-2022</td>
+    </tr>
+    <tr>
+    <td>6</td>
+    <td>Python  for  Data  Science</td>
+    <td>Rs.2000</td>
+    <td>12  weeks</td>
+    <td>17-08-2022</td>
+    </tr>
+    </table>
+     
+    <br>
+    
+    
+    </div>
+    
+    
+</div>
+</center>
+    <br>
+    <br>
+    <br>
+    <br>
+    <center>
+    <h1 style="">
+    
+    <a  href="Page4.html "style="color:  rgb(0,  0,  0);text-decoration:none;">Click  here  to  register  for  a  course!</a>
+    </h1>
+</center>
+<!DOCTYPE html> 
+<html> 
+<head> 
+<style> 
+#bordering { 
+ border: 25px solid transparent; 
+ padding: 30px; 
+ border-image: url(border.jpg) 60 round; 
+ } 
+</style> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head> 
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"> 
+</script>
+<body ng-app="myApp" ng-controller="vidctrl"> 
+    <div id="bordering" align="center"> 
+    <button ng-click="playVid()" > <i class="fa fa-play"> </i></button> 
+    <button ng-click="pauseVid()" > <i class="fa fa-pause"></i></button> 
+    <button ng-click="makeBig()" ><i class="fa fa-expand"></i></button> 
+    <button ng-click="makeSmall()" ><i class="fa fa-compress"></i></button> 
+    <button ng-click="makeNormal()" >Original Size</button>
+    <button ng-click="skip(10)" > <i class="fa fa-step-forward"></i></button> 
+    <button ng-click="restart()" ><i class="fa fa-reply"></i></button> 
+    <button ng-click="mute()" ><i class="fa fa-volume-off"></i></button> 
+    <button ng-click="unmute()" ><i class="fa fa-volume-up"></i></button> 
+    <button ng-click="speed()" >2x</button> 
+    <button ng-click="speeds()" >3x</button> 
+    <button ng-click="normal()" >1x</button> 
+    <br> 
+    <video id="video1" width="420" height="300"> 
+     <source src="sample-mp4-file-small.mp4" type="video/mp4"> 
+    </video> 
+    </div> 
+    <script> 
+     var app= angular.module('myApp',[]); 
+     app.controller('vidctrl',function($scope){ 
+     var vid=document.getElementById("video1"); 
+     $scope.playVid = function(){ 
+     vid.play(); 
+    } 
+    $scope. pauseVid= function() { 
+     vid.pause(); 
+    } 
+    $scope. makeBig = function() { 
+     vid.width = 560; 
+     vid.height=400; 
+     } 
+    $scope. makeSmall = function() { 
+     vid.width = 320; 
+     vid.height=200; 
+     } 
+    $scope. makeNormal = function() { 
+     vid.width = 420; 
+     vid.height=300; 
+     } 
+    $scope. skip = function(value) { 
+     vid.currentTime += value; 
+    } 
+$scope.restart= function() { 
+ vid.currentTime = 0; 
+ } 
+$scope. mute= function() { 
+ vid.muted=true; 
+ } 
+$scope. unmute= function() { 
+ vid.muted=false; 
+ } 
+$scope. speed= function() { 
+ vid.playbackRate= 2; 
+ } 
+$scope. speeds= function() { 
+ vid.playbackRate= 3; 
+ } 
+$scope. normal= function() { 
+ vid.playbackRate= 1; 
+ } 
+}); 
+</script> 
+<h3><center><button style="font-size: larger;" onclick="getLocation()">Try It</button></center></h3>
+
+<center><p id="demo"></p></center>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition, showError);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+function showError(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      x.innerHTML = "User denied the request for Geolocation."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML = "Location information is unavailable."
+      break;
+    case error.TIMEOUT:
+      x.innerHTML = "The request to get user location timed out."
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML = "An unknown error occurred."
+      break;
+  }
+}
+</script>
+
+</body> 
+</html> 
+    <!--<video  width="320"  height="240"  controls  autoplaymuted>
+<source  src="https://youtu.be/0aGwA5gxhzo"  type="video/mp4">
+ 	Your  browser  does  not  support  the  video  tag.
+    </video>
+    <br>
+<br>
+<button  onclick="success()"  style="background-color:  black;  color:  rgb(237,  240,  62);"><h2><em>Click  here  to  view  your  location</em></h2></button>
+<p  id="demo">  </p>
+</h3>
+<form id="form1" runat="server">
+    <table border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>City:</td>
+            <td><span id="City"></span></td>
+        </tr>
+        <tr>
+            <td>State:</td>
+            <td><span id="State"></span></td>
+        </tr>
+        <tr>
+            <td>Country:</td>
+            <td><span id="Country"></span></td>
+        </tr>
+    </table>
+    </form>
+
+ 
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.js"></script>
+    <script type="text/javascript">
+        navigator.geolocation.getCurrentPosition(success, error);
+        function success(position) {
+            var url = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + position.coords.latitude + '%2C' + position.coords.longitude + '&language=en&key=API_Key';
+            $.getJSON(url).done(function (location) {
+                var address = [];
+                for (var ac = 0; ac < location.results.length; ac++) {
+                    var component = location.results[ac];
+                    switch (component.types[0]) {
+                        case 'locality':
+                            address['city'] = component.formatted_address.split(',')[0];
+                            break;
+                        case 'administrative_area_level_1':
+                            address['state'] = component.formatted_address.split(',')[0];
+                            break;
+                        case 'country':
+                            address['country'] = component.formatted_address;
+                            break;
+                    }
+                };
+ 
+                $('[id*=City]').html(address['city']);
+                $('[id*=State]').html(address['state']);
+                $('[id*=Country]').html(address['country']);
+            })
+        }
+        function error(response) {
+            alert(response.responseText);
+        }
+
+ 	/*var  x  =  document.getElementById("demo");
+
+function  getLocation()  {
+if  (navigator.geolocation)  {
+ 	navigator.geolocation.getCurrentPosition(showPosition);
+}  else  {
+ 	x.innerHTML  =  "Geolocation  is  not  supported  by this  browser.";
+}
+}
+
+
+ 	function  showPosition(position)  {
+         //  x.innerHTML  =  "Latitude:  "  +  position.coords. latitude  +
+ 	//  "<br>Longitude:  "  +  position.coords.longitude
+;
+
+var  latitude  =  "latitude="  +  position.coords.latitude;
+var  longitude  =  "&longitude="  +  position
+.coords.longitude;
+var  query  =  latitude  +  longitude  +  "&loc alityLanguage=en";
+const  Http  =  new  XMLHttpRequest();
+var  bigdatacloud_api  =  "https://api.bigd atacloud.net/data/reverse-geocode-client?";
+bigdatacloud_api  +=  query;
+Http.open("GET",  bigdatacloud_api);
+Http.send();
+Http.onreadystatechange  = function()
+{
+if  (this.readyState  ==  4  &&  this.status  ==  200) 
+{
+var  myObj  =  JSON.parse(this.responseText);
+console.log(myObj);
+alert("City  :  "  +  myObj.city  +  ",  Country  :  "  +  myObj.countryName);
+}
+};
+}*/
+
+</script>-->
+<div  class="image"></div>
+</body>
+</html>
+            
